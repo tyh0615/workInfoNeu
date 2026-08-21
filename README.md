@@ -52,6 +52,10 @@ pnpm build
 
 # 运行桌面应用
 pnpm start
+
+# 打包 可以加 --embed-resources
+
+neu build --embed-resources
 ```
 
 ## 数据存储
@@ -62,3 +66,7 @@ pnpm start
 - `settings.json` - 应用设置
 - `attachments.json` - 附件元数据
 - `attachments/` - 附件文件（按月份/分类组织）
+
+![image-20260821164248234](https://raw.githubusercontent.com/tyh0615/picture-bed/main/image/1787301768_0.png)
+
+![image-20260821164310866](https://raw.githubusercontent.com/tyh0615/picture-bed/main/image/1787301791_0.png)
