@@ -12,6 +12,7 @@ import type { WindowApi } from '@shared/ipc'
 import type { NeutralinoNs } from './globals'
 import * as store from './dataStore'
 import * as holidays from './holidays'
+import * as attachments from './attachments'
 import { exportToFile } from './exportService'
 
 let initPromise: Promise<void> | null = null
@@ -55,6 +56,7 @@ export async function initNeuBackend(): Promise<void> {
   await ensureNeuReady()
   await store.initDataStore()
   await holidays.initHolidays()
+  await attachments.initAttachments()
   try {
     version = await Neutralino.app.getVersion()
   } catch {
@@ -90,6 +92,12 @@ function injectApi(): void {
     app: {
       getVersion: () => Promise.resolve(version),
       getDataPath: () => Promise.resolve(store.getDataPath())
+    },
+    attachment: {
+      getMonth: (monthKey: string) => attachments.getMonth(monthKey),
+      upload: (monthKey, category, files) => attachments.upload(monthKey, category, files),
+      delete: (monthKey, category, id) => attachments.remove(monthKey, category, id),
+      download: (monthKey, category, id) => attachments.downloadFile(monthKey, category, id)
     }
   }
   ;(window as unknown as { api: WindowApi }).api = api

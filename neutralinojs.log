@@ -1,6 +1,0 @@
-INFO 2026-08-21 10:24:12,515 Auth info was exported to ./.tmp/auth_info.json D:\a\neutralinojs\neutralinojs\api\debug\debug.cpp:14 Dawn-PC@DAWN-PC
-ERROR 2026-08-21 10:24:13,983 NE_RS_UNBLDRE: Unable to load application resource file /resources/favicon.ico D:\a\neutralinojs\neutralinojs\api\debug\debug.cpp:17 Dawn-PC@DAWN-PC
-ERROR 2026-08-21 10:24:14,546 NE_RS_UNBLDRE: Unable to load application resource file /resources/.well-known/appspecific/com.chrome.devtools.json D:\a\neutralinojs\neutralinojs\api\debug\debug.cpp:17 Dawn-PC@DAWN-PC
-ERROR 2026-08-21 10:24:14,708 NE_RS_UNBLDRE: Unable to load application resource file /resources/vendor/exceljs.min.js.map D:\a\neutralinojs\neutralinojs\api\debug\debug.cpp:17 Dawn-PC@DAWN-PC
-INFO 2026-08-21 10:27:54,901 Auth info was exported to ./.tmp/auth_info.json D:\a\neutralinojs\neutralinojs\api\debug\debug.cpp:14 Dawn-PC@DAWN-PC
-ERROR 2026-08-21 10:27:55,899 NE_RS_UNBLDRE: Unable to load application resource file /resources/favicon.ico D:\a\neutralinojs\neutralinojs\api\debug\debug.cpp:17 Dawn-PC@DAWN-PC

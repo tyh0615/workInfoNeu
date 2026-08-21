@@ -11,6 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AttachmentUploader: typeof import('./components/editor/AttachmentUploader.vue')['default']
     CalendarCell: typeof import('./components/calendar/CalendarCell.vue')['default']
     CalendarGrid: typeof import('./components/calendar/CalendarGrid.vue')['default']
     CalendarToolbar: typeof import('./components/calendar/CalendarToolbar.vue')['default']

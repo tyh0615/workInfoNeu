@@ -9,6 +9,7 @@
     "dev": "npm run build:web && neu run",
     "build": "npm run build:web && neu build",
     "build:release": "npm run build:web && neu build --release",
+    "build:win": "npm run build:release --embed-resources",
     "run": "npm run build:web && neu run"
   },
   "dependencies": {

@@ -35,6 +35,31 @@ export interface ExportResult {
   filePath?: string
 }
 
+/** 附件分类（按月划分，每月 5 个固定类别） */
+export type AttachmentCategory = 'week1' | 'week2' | 'week3' | 'week4' | 'monthly'
+
+/** 附件条目（每条对应磁盘上一个文件） */
+export interface Attachment {
+  id: string // crypto.randomUUID()
+  name: string // 原始文件名
+  size: number // 字节
+  type: string // MIME
+  storedName: string // 落盘名：id + __ + sanitize(原名)
+  uploadedAt: string // ISO 时间
+}
+
+/** 某月所有附件，按 5 个分类组织 */
+export type MonthAttachmentBucket = Partial<Record<AttachmentCategory, Attachment[]>>
+
+/** 附件分类元数据（前后端共享，前端用于渲染、后端用于落盘目录名） */
+export const ATTACHMENT_CATEGORIES: ReadonlyArray<{ key: AttachmentCategory; label: string; dir: string }> = [
+  { key: 'week1', label: '第一周', dir: 'week1' },
+  { key: 'week2', label: '第二周', dir: 'week2' },
+  { key: 'week3', label: '第三周', dir: 'week3' },
+  { key: 'week4', label: '第四周', dir: 'week4' },
+  { key: 'monthly', label: '当月月报', dir: 'monthly' }
+] as const
+
 /** 应用设置（主进程读写 userData/settings.json，供提醒调度器直接读取） */
 export interface AppSettings {
   reminderEnabled: boolean // 提醒总开关

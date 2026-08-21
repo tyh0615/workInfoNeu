@@ -25,6 +25,7 @@ export interface NeutralinoNs {
     remove: (path: string) => Promise<void>
     move: (source: string, dest: string) => Promise<void>
     writeBinaryFile: (name: string, data: ArrayBuffer) => Promise<void>
+    readBinaryFile: (path: string) => Promise<ArrayBuffer>
   }
 }
 
