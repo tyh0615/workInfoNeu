@@ -1,0 +1,39 @@
+:root {
+  --wl-bg: #f5f7fa;
+  --wl-surface: #ffffff;
+  --wl-border: #e4e7ed;
+  --wl-text: #303133;
+  --wl-text-secondary: #909399;
+  --wl-primary: #409eff;
+  --wl-holiday: #f56c6c;
+  --wl-makeup: #409eff;
+  --wl-weekend: #a8abb2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    'PingFang SC', 'Microsoft YaHei', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--wl-bg);
+  color: var(--wl-text);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 日历网格通用 */
+.wl-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
